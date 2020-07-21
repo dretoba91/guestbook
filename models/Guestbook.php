@@ -3,9 +3,8 @@
 namespace app\models;
 
 use Yii;
-// use yii\base\Model;
 
-class Guestbook extends \yii\db\ActiveRecord 
+class Guestbook extends \yii\db\ActiveRecord
 {
     public static function tablename()
     {
@@ -15,15 +14,14 @@ class Guestbook extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'email'], 'required']
+            [['name', 'email'], 'required'],
         ];
     }
 
-    public function attributeLables()
+    public function attributeLabels()
     {
         return [
             'name' => 'NAME'
-
         ];
     }
 
