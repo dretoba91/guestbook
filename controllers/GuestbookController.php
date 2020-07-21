@@ -13,10 +13,13 @@ class GuestbookController extends Controller
     public function actionIndex()
     {
         $query = Guestbook::find()->all();
-       return $this->render('index', [
+
+        // var_dump($query);
+        // die();
+       return $this->render('index2', [
         'guestbooks' => $query,
         
-    ]);
+    	]);
     }
 
 
