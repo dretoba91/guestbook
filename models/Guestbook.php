@@ -15,13 +15,17 @@ class Guestbook extends \yii\db\ActiveRecord
     {
         return [
             [['name', 'email'], 'required'],
+            ['email', 'email'],
+            [['datetime'], 'safe'],
         ];
     }
 
     public function attributeLabels()
     {
         return [
-            'name' => 'NAME'
+            'name' => 'Name',
+            'email' => 'Email',
+            'message' => 'Your Message'
         ];
     }
 
