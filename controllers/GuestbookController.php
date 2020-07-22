@@ -12,11 +12,11 @@ class GuestbookController extends Controller
     {
         $query = Guestbook::find()->all();
 
-        var_dump($query);
-        die();
+        // var_dump($query);
+        // die();
 
-        // return $this->render('index', [
-        //     'guestbooks' => $query,
-        // ]);
+        return $this->render('index', [
+            'guestbooks' => $query,
+        ]);
     }
 }
